@@ -9,9 +9,9 @@ MongoClient.connect('mongodb://localhost/', function(err, db) {
     }
     console.log('Connected to MongoDB database');
     db.close();
-});
 
-var collection = db.collection('snippets');
+
+	var collection = db.collection('snippets');
 
     var create = function(name, content) {
         db.close();
@@ -49,4 +49,9 @@ var collection = db.collection('snippets');
     };
 
     main();
+    //"C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe"
 });
+
+:
+w-write
+q-quit
