@@ -69,4 +69,32 @@ mongoose.connection.once('open', function() {
             mongoose.disconnect();
         });
     };
+//Try it exercise:
+// Add the four CRUD methods to your snippets.js file, and add in a command-line interface similar to the one in the previous assignment. Test out your code to make sure that the Mongoose version works correctly.
+
+// Add the main function to process the command line arguments.
+// Manually test (don't use mocha) that your app will:
+// Create a new snippet in the database
+// Get a snippet from the database
+// Edit a snippet in the database
+// Delete a snippet from the database
+    var main = function() {
+            if (process.argv[2] == 'create') {
+                create(process.argv[3], process.argv[4]);
+            }
+            else if (process.argv[2] == 'read') {
+                read(process.argv[3]);
+            }
+            else if (process.argv[2] == 'update') {
+                update(process.argv[3], process.argv[4]);
+            }
+            else if (process.argv[2] == 'delete') {
+                del(process.argv[3]);
+            }
+            else {
+                console.error('Command not recognized');
+                db.close();
+            }
+        }
+        main();
 });
