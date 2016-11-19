@@ -93,7 +93,7 @@ mongoose.connection.once('open', function() {
             }
             else {
                 console.error('Command not recognized');
-                db.close();
+                //db.close(); erase no db using mongoose.
             }
         }
         main();

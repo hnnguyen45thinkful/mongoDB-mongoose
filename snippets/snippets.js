@@ -1,6 +1,6 @@
 var MongoClient = require('mongodb').MongoClient;
 
-MongoClient.connect('mongodb://localhost/', function(err, db) {
+MongoClient.connect('mongodb://localhost/snippets', function(err, db) {
     if (err) {
         console.error(err);
         db.close();
